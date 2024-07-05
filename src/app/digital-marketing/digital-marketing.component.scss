@@ -1,0 +1,40 @@
+@import "../root-portfolio/root-portfolio.component.scss";
+
+.masthead {
+  padding: 3rem 0 6rem 0;
+  position: relative;
+  overflow: hidden;
+  background-color: #C4B1F9;
+ 
+    
+  img{
+    border-radius: 1rem;
+    position: relative;
+    top : 50%;
+    left : 0% ; 
+    z-index: 2;
+  }
+
+  .background-img {
+    position: absolute;
+    left: 25%;
+    top: -7%;
+    z-index: 1;
+    // transform: translateY(-50%);
+    fill: #8468D1;
+  }
+}
+
+
+
+section {
+
+
+    img {
+      aspect-ratio: 4/2;
+      
+      width: 80%;
+      margin :auto;
+    }
+  
+}

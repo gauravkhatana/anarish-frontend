@@ -1,0 +1,42 @@
+<section class="page-section" id="services"  [style.background]="getBackgroundColor()">
+    <div class="container">
+        <div class="pt-5">
+            <h3 class="section-heading mb-5">What we offer you</h3>
+        </div>
+
+        <div class="row pb-5">
+            <div class="col-6">
+                <a *ngFor="let product of products; let i = index" href="javascript:void(0)"
+                   [class.active]="activeIndex === i"
+                   (mouseover)="setActive(i)">
+                    <div class="d-flex align-items-center mb-5">
+                        <img class="me-4 arrow-icon" *ngIf="activeIndex === i" src="assets/img/arrow.svg" alt="">
+                        <h3 class="mb-0 products">{{ product.name }}</h3>
+                    </div>
+                </a>
+            </div>
+        
+            <div class="col-6">
+                <div *ngIf="activeIndex === 0">
+                    <p class="product-info">{{ productDescriptions[0].info }}</p>
+                    <img src="assets/img/design-img.svg" alt="">
+                </div>
+                <div *ngIf="activeIndex === 1">
+                    <p class="product-info">{{ productDescriptions[1].info }}</p>
+                    <img src="assets/img/product-img.svg" alt="">
+                </div>
+                <div *ngIf="activeIndex === 2">
+                    <p class="product-info">{{ productDescriptions[2].info }}</p>
+                    <img src="assets/img/digital-design.svg" alt="">
+                </div>
+                <div *ngIf="activeIndex === 3">
+                    <p class="product-info">{{ productDescriptions[3].info }}</p>
+                    <img src="assets/img/engagement-design.svg" alt="">
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</section>

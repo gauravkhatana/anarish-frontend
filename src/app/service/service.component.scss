@@ -1,0 +1,52 @@
+.page-section{
+    background: #5EE0F7;
+}
+
+.section-heading {
+    color: #000;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+    font-family: "Manrope", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.products {
+    color: #000;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: "Manrope", sans-serif;
+    line-height: 44px;
+    opacity: 0.2;
+}
+
+.active .products {
+    opacity: 1;
+}
+
+.arrow-icon {
+    display: none;
+}
+
+.active .arrow-icon {
+    display: inline;
+}
+
+.product-info {
+    color: #000;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    font-family: "Manrope", sans-serif;
+}
+
+.services-icon h4 {
+    font-weight: 700;
+}
+
+.section-subheadings {
+    font-family: 'Roboto Slab', serif;
+}

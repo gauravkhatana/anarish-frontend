@@ -1,0 +1,79 @@
+.portfolio-main{
+  background-color: #fff;
+}
+
+.software-service{
+  background: linear-gradient(292deg, #ECF5FF 2.36%, #FBFDFF 98.84%);
+}
+
+    .tab:hover{  
+        cursor: pointer;
+        color: #cca000;
+}
+
+.nav-links{
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+}
+
+.nav-links:hover{
+  color: #cca000;
+}
+
+
+@media (min-width: 992px){
+
+    #mainNav {
+        // padding-top: 1.5rem;
+        // padding-bottom: 1.5rem;
+        border: none;
+        // background-color: transparent;
+        transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+      }
+      #mainNav .navbar-brand {
+        transition: font-size 0.3s ease-in-out;
+      }
+      #mainNav .navbar-brand img {
+        height: 5rem;
+        transition: height 0.3s ease-in-out;
+      }
+      #mainNav.navbar-shrink {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        background-color: #212529;
+      }
+      #mainNav.navbar-shrink .navbar-brand {
+        font-size: 1.25em;
+      }
+
+      #mainNav.navbar-shrink .navbar-brand img {
+        height: 3rem;
+      }
+      #mainNav .navbar-nav .nav-item {
+        margin-right: 2.5rem;
+      }
+      #mainNav .navbar-nav .nav-item:last-child {
+        margin-right: 0;
+      }
+
+    // .navbar-brand img {
+    //     height: 3rem;
+    // }
+
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+        justify-content: flex-end;
+    }
+    
+    .tab{
+      color: white;
+      margin-right: 2.5rem;
+      font-size: 1.1rem;
+    }
+
+
+}
+
+

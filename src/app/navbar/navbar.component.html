@@ -1,0 +1,68 @@
+<div  class="navbar-main">
+    <div id="navbar1" class="navB"  [ngClass]="scroll == 0 ? 'bgColor' : ''">
+
+        <nav class="navbar navbar-expand-lg bgColor navbar-dark fixed-top navbar-shrink" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">
+                    <img src="assets/img/anarish-logo.png" alt="Anarish Innovations" class="img-fluid"/>
+                </a>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Service</a>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Portfolio tab nav
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </div>
+</div>
+<div #home class="home-main">
+<app-home></app-home>
+</div>
+
+<div id="portfolio" #portfolio class="portfolio-main">
+  <app-portfolio></app-portfolio>
+  </div>
+
+<div #service class="service-main">
+<app-service></app-service>
+</div>
+
+<div #beliefs class="believe-main">
+<app-believe></app-believe>
+</div>
+
+<div class="software-service">
+<app-software-services></app-software-services>
+</div>
+
+<div class="clients">
+<app-clients></app-clients>
+</div>
+
+<div id="recommendations"  class="recommendations-main">
+<app-recommend></app-recommend>
+</div>
+<div #contactus class="contact-main">
+<app-contact></app-contact>
+</div>
+<div class="footer-main">
+<app-footer></app-footer>
+</div>

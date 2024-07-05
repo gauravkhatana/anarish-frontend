@@ -1,0 +1,119 @@
+<section id="contactUs" class="mb-5 container page-section">
+    <div class="row">
+        <div class="col-5">
+            <div class="info-section px-5 py-4 h-100">
+                <h2 class="mb-0 info-header">Lets craft</h2>
+                <h2 class="info-header">brilliance together!</h2>
+                <p class="description">Got something in mind? We'd love to help.</p>
+
+                <form action="" #formData = "ngForm">
+                    
+                    <div class="mb-4">
+                        <label for="exampleFormControlInput1" class="form-label">What is your name?</label>
+                        <input type="text" class="form-control" name="name" id="exampleFormControlInput1" placeholder="" [(ngModel)] = "userData.name">
+                    </div>
+                    <div class="mb-4">
+                        <label for="exampleFormControlInput1" class="form-label">What is your email address? *</label>
+                        <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder=""  [(ngModel)] = "userData.email">
+                    </div>
+                    <div class="mb-4">
+                        <label for="exampleFormControlInput1" class="form-label">What is your phone number?</label>
+                        <input type="tel" class="form-control" name="phoneNumber" id="exampleFormControlInput1" placeholder=""  [(ngModel)] = "userData.phoneNumber">
+                    </div>
+
+
+                    <p class="checkbox-header mb-1">Interested in:</p>
+                    <div class="row">
+                        <div class="col-6" *ngFor="let intrest of intrests">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" [name]="intrest.option" type="checkbox" [value]="intrest.option" [id]="intrest.id" (change)="onChange(intrest)" >
+                                <label class="form-check-label" [for]="intrest.id">
+                                    {{intrest.option}}
+                                </label>
+                            </div>
+                        </div>
+                        <!-- <div class="col-6">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" name="intrests" type="checkbox" value="" id="flexCheckDefault" ngModel>
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    UI Design
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" name="intrests" type="checkbox" value="" id="flexCheckDefault" ngModel>
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    UX Consultation
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" name="intrests" type="checkbox" value="" id="flexCheckDefault" ngModel>
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Product Design
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" name="intrests" type="checkbox" value="" id="flexCheckDefault" ngModel>
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    React Js
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" name="intrests" type="checkbox" value="" id="flexCheckDefault" ngModel>
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Frontend
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" name="intrests" type="checkbox" value="" id="flexCheckDefault" ngModel>
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Backend
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" name="intrests" type="checkbox" value="" id="flexCheckDefault" ngModel>
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Micro-site
+                                </label>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <p class="checkbox-header mt-3 mb-1">Tell us about your project requirement</p>
+                    <div class="mb-3 textarea">
+                        <label for="exampleFormControlTextarea1" class="textarea-label form-label">Looking for UX/UI
+                            research or product branding? Post your query now, and we'll get in touch with you
+                            soon!</label>
+                        <textarea class="textarea-form form-control" name="projectRequirements" id="exampleFormControlTextarea1"
+                            rows="3"  [(ngModel)] = "userData.projectRequirements"></textarea>
+                    </div>
+
+                    <button class="btn submit-btn w-100" (click)="submitHandler()" >Submit</button>
+                </form>
+
+
+            </div>
+        </div>
+
+        <div class="col-7">
+            <h2 class="talk">Let's Talk</h2>
+            <p class="marketing-email">marketinganarish.com</p>
+            <p class="ofc-address mb-1">Sector 3, Faridabad, Haryana</p>
+            <p class="ofc-address">+91-9899844180</p>
+            <p class="ofc-address">Terms & Conditions / Privacy Policy</p>
+
+            <img src="assets/img/map.svg" alt="">
+        </div>
+    </div>
+</section>

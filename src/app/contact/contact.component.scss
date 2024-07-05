@@ -1,0 +1,57 @@
+header.masthead {
+  padding-top: 10.5rem;
+  padding-bottom: 6rem;
+  text-align: center;
+  color: #fff;
+  background-image: url("/assets/img/contact-img.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .2);
+
+  .masthead-subheading {
+    font-family: "Manrope", sans-serif;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 600;
+  line-height : 1.4;
+  }
+}
+
+.contact-heading {
+  font-family: "Manrope", sans-serif;
+  color: #FFF;
+  font-size: 48px;
+  font-weight: 700;
+ line-height : 1.4;
+}
+
+.btn-xl {
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Manrope", sans-serif;
+ line-height : 1.4;
+  padding: 17px 32px;
+}
+
+@media (min-width: 768px) {
+  header.masthead {
+    padding-top: 12rem;
+    padding-bottom: 7.5rem;
+  }
+
+  @media (min-width: 1200px) {
+
+    h1,
+    .h1 {
+      color: #FFF;
+      font-family: "Manrope", sans-serif;
+      font-size: 56px;
+      font-weight: 700;
+     line-height : 1.4;
+      letter-spacing: -1.12px;
+    }
+  }
+}
