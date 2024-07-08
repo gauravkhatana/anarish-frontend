@@ -1,24 +1,27 @@
-<section id="contactUs" class="mb-5 container page-section">
+<section id="contactUs" class="page-section">
     <div class="row">
-        <div class="col-5">
-            <div class="info-section px-5 py-4 h-100">
+        <div class="col-6 spacing-1 theme-color-bg-light-yellow">
+            <div class="info-section ">
                 <h2 class="mb-0 info-header">Lets craft</h2>
                 <h2 class="info-header">brilliance together!</h2>
                 <p class="description">Got something in mind? We'd love to help.</p>
 
-                <form action="" #formData = "ngForm">
-                    
+                <form action="" #formData="ngForm">
+
                     <div class="mb-4">
                         <label for="exampleFormControlInput1" class="form-label">What is your name?</label>
-                        <input type="text" class="form-control" name="name" id="exampleFormControlInput1" placeholder="" [(ngModel)] = "userData.name">
+                        <input type="text" class="form-control" name="name" id="exampleFormControlInput1" placeholder=""
+                            [(ngModel)]="userData.name">
                     </div>
                     <div class="mb-4">
                         <label for="exampleFormControlInput1" class="form-label">What is your email address? *</label>
-                        <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder=""  [(ngModel)] = "userData.email">
+                        <input type="email" class="form-control" name="email" id="exampleFormControlInput1"
+                            placeholder="" [(ngModel)]="userData.email">
                     </div>
                     <div class="mb-4">
                         <label for="exampleFormControlInput1" class="form-label">What is your phone number?</label>
-                        <input type="tel" class="form-control" name="phoneNumber" id="exampleFormControlInput1" placeholder=""  [(ngModel)] = "userData.phoneNumber">
+                        <input type="tel" class="form-control" name="phoneNumber" id="exampleFormControlInput1"
+                            placeholder="" [(ngModel)]="userData.phoneNumber">
                     </div>
 
 
@@ -26,7 +29,8 @@
                     <div class="row">
                         <div class="col-6" *ngFor="let intrest of intrests">
                             <div class="form-check mb-2">
-                                <input class="form-check-input" [name]="intrest.option" type="checkbox" [value]="intrest.option" [id]="intrest.id" (change)="onChange(intrest)" >
+                                <input class="form-check-input" [name]="intrest.option" type="checkbox"
+                                    [value]="intrest.option" [id]="intrest.id" (change)="onChange(intrest)">
                                 <label class="form-check-label" [for]="intrest.id">
                                     {{intrest.option}}
                                 </label>
@@ -95,25 +99,47 @@
                         <label for="exampleFormControlTextarea1" class="textarea-label form-label">Looking for UX/UI
                             research or product branding? Post your query now, and we'll get in touch with you
                             soon!</label>
-                        <textarea class="textarea-form form-control" name="projectRequirements" id="exampleFormControlTextarea1"
-                            rows="3"  [(ngModel)] = "userData.projectRequirements"></textarea>
+                        <textarea class="textarea-form form-control" name="projectRequirements"
+                            id="exampleFormControlTextarea1" rows="3"
+                            [(ngModel)]="userData.projectRequirements"></textarea>
                     </div>
 
-                    <button class="btn submit-btn w-100" (click)="submitHandler()" >Submit</button>
+                    <button class="btn submit-btn w-100" (click)="submitHandler()">Submit</button>
                 </form>
 
 
             </div>
         </div>
 
-        <div class="col-7">
-            <h2 class="talk">Let's Talk</h2>
-            <p class="marketing-email">marketinganarish.com</p>
-            <p class="ofc-address mb-1">Sector 3, Faridabad, Haryana</p>
-            <p class="ofc-address">+91-9899844180</p>
-            <p class="ofc-address">Terms & Conditions / Privacy Policy</p>
+        <div class="col-6 spacing-2 theme-color-bg-yellow">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex align-items-center">
+                        <div class="pe-3">
+                            <p class="heading">
+                                We can connect about a project or maybe a coffee?
+                            </p>
+                            <h1>
+                                Say Hello!
+                            </h1>
+                            <h3>{{this.ourEmail}}</h3>
+                            <h3>+91-9899844180</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 position-relative d-flex align-items-center justify-content-center">
 
-            <img src="assets/img/map.svg" alt="">
+                        <div class="img-wrapper">
+                            <img src="../../assets/img/map-2.png" class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="findus"></div>
+            <h3>Find us at</h3>
+            <p>Sector 3, Near Tagore Academy</p>
+            <p>Faridabad, Haryana, 121010</p>
         </div>
+
     </div>
+
 </section>

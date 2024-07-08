@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent  {
   scroll: number = 0;
-  isEmpty: boolean = false;
+  isDropdownShow: boolean = false;
 
   constructor(private router: Router) {}
 

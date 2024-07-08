@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   
 })
 export class AppComponent {
-  title= "anarish"
+  title= "Anarish Innovations"
   isEmpty: boolean = false;
 
 

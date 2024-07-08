@@ -13,6 +13,7 @@ import { DatePipe } from '@angular/common';
   standalone: true,
 })
 export class ContactUsComponent {
+  ourEmail:string = 'marketing@anarish.com';
   userData: UserData = {
     name: '',
     email: '',

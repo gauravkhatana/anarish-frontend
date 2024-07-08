@@ -6,19 +6,31 @@
   overflow: hidden;
   background-color: #C4B1F9;
  
-    
-  img{
+  .img-wrapper {
+    width: 90%;
+    max-width: max-content;
+    aspect-ratio: 9/5;
+    overflow: hidden;
+    z-index: 3;
     border-radius: 1rem;
-    position: relative;
-    top : 50%;
-    left : 0% ; 
-    z-index: 2;
+    border: solid 5px #100d18 ;
+    
+
+
+    img {
+      border-radius: 1rem;
+      position: relative;
+      top: 15%;
+      z-index: 9;
+      scale: 1.02;
+      width: 100%; 
+    }
   }
 
   .background-img {
     position: absolute;
-    left: 25%;
-    top: -7%;
+    left: 40%;
+    top: -10%;
     z-index: 1;
     // transform: translateY(-50%);
     fill: #8468D1;
@@ -27,14 +39,3 @@
 
 
 
-section {
-
-
-    img {
-      aspect-ratio: 4/2;
-      
-      width: 80%;
-      margin :auto;
-    }
-  
-}

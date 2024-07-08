@@ -11,7 +11,7 @@ export class LmsComponent {
   constructor(private router: Router) { }
 
   navigateToPortfolio() {
-    this.router.navigate(['/portfolio/4']);
+    this.router.navigate(['/portfolio/5']);
   }
 
 

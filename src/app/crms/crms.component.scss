@@ -1,11 +1,14 @@
+@import '../../bootstrap-imports';
 @import "../root-portfolio/root-portfolio.component.scss";
 
-
 .masthead {
-  padding: 3rem 0 6rem 0;
+  padding: 3rem 0;
   position: relative;
   overflow: hidden;
   background-color: #C4B1F9;
+  @include media-breakpoint-up(xl) {
+    padding: 6rem 0;
+  }
 
   img {
     border-radius: 1rem;
@@ -17,8 +20,8 @@
 
   .background-img {
     position: absolute;
-    left: 25%;
-    top: -7%;
+    left: 36%;
+    top: -10%;
     z-index: 1;
     // transform: translateY(-50%);
     fill: #8468D1;
@@ -26,59 +29,16 @@
 }
 
 section {
-  padding: 3rem 0;
-
-  .features-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    justify-content: center;
-
-    h2 {
-      color: #121212; 
-      font-weight: 700;
-      line-height: 1.22;
-        
-    }
- 
-    .description {
-      color: #121212;
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 1.5;
-    }
-
-    li {
-      padding: .75rem 0;
-    }
-  }
-
-  .portfilo-card {
-    padding: 40px;
-    border-radius: 16px;
-
-    h3 {
-      color: var(--Primary, #121212);
-      font-size: 30px;
-      font-weight: 600;
-      line-height: 1.4;
-      /* 133.333% */
-    }
-
+  &.supported-modules {
+    color:#121212;
     p {
-      color: #121212;
-      font-size: 18px;
-      line-height: 1.4;
-      /* 177.778% */
+      line-height: 1.6;
     }
-
-    @media (min-width: 1200px) {
-      img {
-        margin: 40px 40px 20px;
-      }
+    video {
+      max-width: 70%;
     }
   }
-
+  
   &.last-section {
     p {
       color: #000;

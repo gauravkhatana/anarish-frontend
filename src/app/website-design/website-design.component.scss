@@ -3,13 +3,16 @@
 
 
 .masthead {
-  padding: 3rem 0 6rem 0;
+  padding: 3rem 0;
   position: relative;
   overflow: hidden;
+  @include media-breakpoint-up(xl) {
+    padding: 6rem 0;
+  }
 
 
   img {
-    border-radius: 1rem;
+    border-radius: 1rem; 
     position: relative;
     top: 50%;
     left: 0%;
@@ -18,26 +21,22 @@
 
   .background-img {
     position: absolute;
-    left: 25%;
-    top: -7%;
+    left: 36%;
+    top: -10%;
     z-index: 1;
     // transform: translateY(-50%);
     fill: rgba(255, 207, 36, 0.20);
   }
 }
+ 
 
-.empowering {
-  padding: 4rem 0 0 0;
-}
 
 .card {
   --bs-card-bg: #fffbf4;
 }
 
-
-
 .cases-tab-wrap {
-
+padding: 0;
   position: relative;
 
   .cases-tabs {
@@ -158,7 +157,7 @@
 
 
   }
-}
+} 
 
 .case-tabs {
   margin: 0 auto 2rem;
@@ -194,53 +193,6 @@
 }
 
 section {
-  padding: 0;
-
-  .incremental-title {
-    color: var(--Primary, #1D2130);
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.4;
-  }
-
-  .incremental-text {
-    color: var(--Primary, #1D2130);
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1.4;
-  }
-
-
-
-  .list-group {
-    display: flex;
-    gap: 1.5rem;
-
-    .list-group-item {
-
-
-      background-color: #fffbf4;
-      border: none;
-
-      // h5 {
-      //   color: var(--label-primary, #000);
-      //   font-size: 24px;
-      //   font-weight: 600;
-      // line-height : 1.4;
-
-      // }
-
-      // p {
-      //   color: var(--label-primary, #000);
-      //   font-size: 16px;
-      //   font-weight: 400;
-      // line-height : 1.6;
-      // }
-    }
-
-
-  }
-
   &.last-section {
     .pading{
       padding-top: 48px;
@@ -294,22 +246,17 @@ section {
     font-size: 20px;
     line-height: 1.4;
   }
-}
+}  
 
 .features {
-
-
-
   .section-content {
     .row {
-      padding: 3% 0;
-
       .card-1 {
         background-color: #FFF0D9;
         display: flex;
+        height: 100%;
         flex-direction: column;
-        margin: 2% 0;
-        gap: 16px;
+        gap: 16px; 
         justify-content: center;
         border-radius: 1rem;
         padding: 2.5rem 1.5rem;
@@ -346,6 +293,7 @@ section {
       .card-2 {
         background-color: #B1D8FD;
         display: flex;
+        height: 100%;
         flex-direction: column;
         align-items: center;
         width: 100%;
@@ -358,7 +306,6 @@ section {
           display: flex;
           flex-direction: column;
           align-items: center;
-          margin: 2% 0;
           justify-content: center;
 
           img {
@@ -415,15 +362,11 @@ section {
 }
 
 .elivate {
-  .spacing{
-    padding: 48px 71px 70px;
-  }
- 
-
+       
   img {
     z-index: 3;
   }
-
+  
   .img1,
   .img2 {
     padding: 0;
