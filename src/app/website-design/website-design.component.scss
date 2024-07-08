@@ -6,158 +6,153 @@
   padding: 3rem 0;
   position: relative;
   overflow: hidden;
+
   @include media-breakpoint-up(xl) {
     padding: 6rem 0;
-  }
-
-
-  img {
-    border-radius: 1rem; 
-    position: relative;
-    top: 50%;
-    left: 0%;
-    z-index: 2;
   }
 
   .background-img {
     position: absolute;
     left: 36%;
-    top: -10%;
+    top: 0%;
     z-index: 1;
     // transform: translateY(-50%);
     fill: rgba(255, 207, 36, 0.20);
   }
 }
- 
-
 
 .card {
   --bs-card-bg: #fffbf4;
 }
 
-.cases-tab-wrap {
-padding: 0;
-  position: relative;
+section {
+  &.cases-tab-wrap {
+    padding-bottom: 0;
 
-  .cases-tabs {
-    display: flex;
-    align-items: center;
+    position: relative;
 
-    .tab-pane {
-      transition: opacity 0.3s ease;
-      /* Customize transition duration and easing as needed */
-    }
-
-    .tab-pane.fade {
-      border: none !important;
-      opacity: 0;
-      visibility: hidden;
-    }
-
-    .tab-pane.fade.show {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    display:none;
-    border-bottom: none;
-
-    .nav-item {
-      border: none !important;
-      font-weight: 600;
-
-      .nav-link {
-        cursor: pointer;
-        border: transparent;
-        color: #737373;
-        font-size: 18px;
-        font-weight: 600;
-        border-radius: 16px 16px 0 0;
-
-
-
-        &.active {
-          background-color: transparent;
-          color: #000;
-          border-bottom: solid 3px #000;
-        }
-
-        span {
-          font-size: 15px;
-          margin-left: 4px;
-        }
-      }
-    }
-  }
-
-  @include media-breakpoint-up(lg) {
     .cases-tabs {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 1.5rem;
-      padding: 2.5rem 0;
+
+      .tab-pane {
+        transition: opacity 0.3s ease;
+        /* Customize transition duration and easing as needed */
+      }
+
+      .tab-pane.fade {
+        border: none !important;
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .tab-pane.fade.show {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      display:none;
+      border-bottom: none;
+
+      .nav-item {
+        border: none !important;
+        font-weight: 600;
+
+        .nav-link {
+          cursor: pointer;
+          border: transparent;
+          color: #737373;
+          font-size: 18px;
+          font-weight: 600;
+          border-radius: 16px 16px 0 0;
+
+
+
+          &.active {
+            background-color: transparent;
+            color: #000;
+            border-bottom: solid 3px #000;
+          }
+
+          span {
+            font-size: 15px;
+            margin-left: 4px;
+          }
+        }
+      }
     }
 
-    .card {
-      border: 0 none;
-      box-shadow: none;
+    @include media-breakpoint-up(lg) {
+      .cases-tabs {
+        border-bottom: solid 1px grey;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        padding-top: 2.5rem;
+      }
+
+      .card {
+        border: 0 none;
+        box-shadow: none;
+
+        .card-header {
+          display: none !important;
+        }
+
+        .card-body {
+          padding: 0;
+        }
+
+        .collapse.display {
+          display: block;
+        }
+      }
+    }
+
+    @media(max-width:991px) {
+      .tab-content>.tab-pane {
+        display: block !important;
+        opacity: 1;
+        margin-bottom: 10px;
+        border: 0 none;
+        box-shadow: none;
+      }
+
+      a {
+        text-decoration: none;
+      }
 
       .card-header {
-        display: none !important;
+        background-color: #fffbf4;
+        display: flex;
+        justify-content: space-between;
+
+
+
+
+        span {
+          font-size: 18px;
+          font-weight: 600;
+        }
+
+
+
+
+        i {
+          padding-top: 5px;
+          text-decoration: none !important;
+        }
       }
 
-      .card-body {
-        padding: 0;
+      .card-header[aria-expanded="true"] .fa-plus:before {
+        content: "\f068";
       }
 
-      .collapse.display {
-        display: block;
-      }
+
     }
   }
-
-  @media(max-width:991px) {
-    .tab-content>.tab-pane {
-      display: block !important;
-      opacity: 1;
-      margin-bottom: 10px;
-      border: 0 none;
-      box-shadow: none;
-    }
-    a{
-      text-decoration: none;
-    }
-
-    .card-header {
-      background-color: #fffbf4;
-      display: flex;
-      justify-content: space-between;
-
-
-
-
-      span {
-        font-size: 18px;
-        font-weight: 600;
-      }
-
-
-
-
-      i {
-        padding-top: 5px;
-        text-decoration: none !important;
-      }
-    }
-
-    .card-header[aria-expanded="true"] .fa-plus:before {
-      content: "\f068";
-    }
-
-
-  }
-} 
+}
 
 .case-tabs {
   margin: 0 auto 2rem;
@@ -178,7 +173,8 @@ padding: 0;
   }
 
   .cases-accordion {
-    background-color: transparent
+    padding-top: 2.5rem;
+    background-color: transparent;
   }
 
   .btn-primary {
@@ -194,11 +190,12 @@ padding: 0;
 
 section {
   &.last-section {
-    .pading{
+    .pading {
       padding-top: 48px;
       padding-bottom: 40px;
 
     }
+
     p {
       color: #000;
       font-size: 22px;
@@ -231,8 +228,6 @@ section {
 }
 
 .c-heading {
-  padding: 1rem 0 0 0;
-
   h2 {
     color: var(--system-black, #000);
     font-size: 36px;
@@ -246,9 +241,11 @@ section {
     font-size: 20px;
     line-height: 1.4;
   }
-}  
+}
 
 .features {
+  padding: 40px 71px 70px;
+
   .section-content {
     .row {
       .card-1 {
@@ -256,7 +253,7 @@ section {
         display: flex;
         height: 100%;
         flex-direction: column;
-        gap: 16px; 
+        gap: 16px;
         justify-content: center;
         border-radius: 1rem;
         padding: 2.5rem 1.5rem;
@@ -271,7 +268,7 @@ section {
           @include media-breakpoint-up(lg) {
             font-size: 24px;
             font-weight: 600;
-            line-height: 1.4;
+            line-height: 1.5;
           }
         }
 
@@ -280,12 +277,12 @@ section {
           font-size: 14px;
           font-style: normal;
           font-weight: 400;
-          line-height: 1.6;
+          line-height: 1.7;
 
           @include media-breakpoint-up(lg) {
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 400;
-            line-height: 1.4;
+            line-height: 1.8;
           }
         }
       }
@@ -362,11 +359,12 @@ section {
 }
 
 .elivate {
-       
+  padding-bottom: 70px;
+
   img {
     z-index: 3;
   }
-  
+
   .img1,
   .img2 {
     padding: 0;

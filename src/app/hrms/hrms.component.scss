@@ -4,25 +4,19 @@
   padding: 3rem 0;
   position: relative;
   overflow: hidden;
-  background: #FFE27C;
+  background: #FFE27C;   
 
   @include media-breakpoint-up(xl) {
     padding: 6rem 0;
   }
 
 
-  img {
-    border-radius: 1rem;
-    position: relative;
-    top: 50%;
-    left: 0%;
-    z-index: 2;
-  }
+     
 
   .background-img {
     position: absolute;
     left: 36%;
-    top: -10%;
+    top: 0%;
     z-index: 1;
     // transform: translateY(-50%);
     fill: #FFCF24;

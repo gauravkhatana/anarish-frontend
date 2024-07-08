@@ -6,14 +6,18 @@
 
 .masthead {
   .img-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    aspect-ratio: 538/305;
+    z-index: 2; 
+    border-radius: 1rem;
+    overflow: hidden;
     position: relative;
     max-height: 540px;
+    border: solid #000 4px;
     img {
-      border: solid #000 4px;
+      width: 100%;
+      z-index: 2; 
     }
+    
   }
   .heading {
     color: #000;
@@ -60,7 +64,7 @@ section {
     }
   }
   .description {
-    color: var(--Primary, #121212);
+    color: var(--Primary, #1D2130);
     font-size: 14px;
     line-height: 1.7;
     margin: 12px 0;
