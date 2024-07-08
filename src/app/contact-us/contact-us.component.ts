@@ -17,7 +17,7 @@ export class ContactUsComponent {
   userData: UserData = {
     name: '',
     email: '',
-    phoneNumber: 0,
+    phoneNumber: null || 0,
     intrests: [],
     projectRequirements: '',
     date: '',
@@ -37,7 +37,9 @@ export class ContactUsComponent {
   ngOnInit(): void {}
 
   onChange(intrest: any): void {
+    console.log("hello")
     intrest.value = !intrest.value;
+    console.log(intrest.value);
   }
 
   submitHandler() {
@@ -47,12 +49,8 @@ export class ContactUsComponent {
 
     let currentDate = new Date();
 
-    let formattedDateTime =
-      '' +
-      this.datePipe.transform(currentDate, 'yyyy-MM-dd') +
-      ' ' +
-      this.datePipe.transform(currentDate, 'HH:mm:ss');
-    // console.log('Current  & time:', formattedDateTime);
+    let formattedDateTime = '' + this.datePipe.transform(currentDate, 'yyyy-MM-dd') + ' ' + this.datePipe.transform(currentDate, 'HH:mm:ss');
+    // Current Date & time
 
     this.userData.date = formattedDateTime;
 
@@ -67,7 +65,7 @@ export class ContactUsComponent {
       }
     );
 
-    this.appService.sendMail(this.userData).subscribe(data => console.log(data ),error => console.error(error));
+    this.appService.sendMail(this.userData).subscribe(data => console.log(data),error => console.error(error));
     
   }
 }
