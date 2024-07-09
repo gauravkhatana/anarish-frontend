@@ -92,9 +92,11 @@ section {
       position: relative;
       display: flex;
       justify-content: center;
-      height: 500px;
-      width: 500px;
-      gap: 10px;
+      align-items: center;
+      height: 80%;
+      width: 80%;
+      padding: auto;
+      gap: 8px;
       border-radius: 3.401px;
       background: rgba(255, 240, 216, 0.20);
     }
