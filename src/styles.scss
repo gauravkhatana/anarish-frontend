@@ -4,7 +4,6 @@
 @import 'variables';
 @import '../node_modules/bootstrap/scss/bootstrap';
 @import '../src/bootstrap-imports';
-@import '../node_modules/swiper/swiper-bundle.min.css';
 
 
 * {
@@ -28,34 +27,19 @@ body {
   margin: auto;
   overflow-x: hidden;
   position: relative;
-  color: var(--system-black, #121212);
+  color: var(--system-black, #000);
 }
 
 /* Overriding Boostrap Styles starts */
 
 .btn {
+  background-color: #000;
   border-radius: 18px;
 }
 
 .btn-link {
   background-color: transparent;
-  color: #121212;
-  i {
-    opacity: 0; 
-    transition: 0.5s;
-  }
-  &:hover {
-    color: #4a4a4a;
-    i {
-      opacity: 1;
-    }
-  }
-}
-.btn-primary {
-  background-color: #121212;
-  &:hover {
-    background-color: #4a4a4a;
-  }
+  color: #000;
 }
 
 /* Overriding Boostrap Styles ends */

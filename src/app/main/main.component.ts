@@ -18,7 +18,6 @@ export class MainComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    
     this.swiper = new Swiper('.slide-container', {
       slidesPerView: 3,
       spaceBetween: 25,
