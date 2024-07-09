@@ -121,77 +121,135 @@ section {
       background: rgba(255, 240, 216, 0.20);
     }
 
-    .card1 {
+    .card1,
+    .card2,
+    .card3 {
       z-index: 0;
       position: absolute;
       border-radius: 10px;
-      transform-origin: bottom left;
-      background-color: rgb(2, 2, 58);
-      background-image: url("../../assets/img/portfolio/ms/Card=1.svg");
       background-size: cover;
       height: 70%;
       width: 70%;
-      // margin-top: 130px;
-      transform: rotate(0deg);
       transition: all 3s;
+    }
+
+    .card1 {
+      transform-origin: bottom left;
+      background-image: url("../../assets/img/portfolio/ms/Card=1.svg");
+      transform: rotate(0deg);
       animation: animate1 4s linear infinite alternate-reverse;
     }
 
     .card2 {
-      z-index: 0;
-      position: absolute;
-      background-color: white;
       background-image: url("../../assets/img/portfolio/ms/Card=2.svg");
-      background-size: cover;
-      border-radius: 10px;
       transform-origin: bottom left;
-      height: 70%;
-      width: 70%;
-      // margin-top: 130px;
       transform: rotate(-4deg);
-      transition: all 3s;
       animation: animate2 4s linear infinite alternate;
     }
 
     .card3 {
-      z-index: 0;
-      position: absolute;
-      background-color: whitesmoke;
       background-image: url("../../assets/img/portfolio/ms/Card=3.svg");
-      background-size: cover;
       background-position: center center;
-      border-radius: 10px;
-      height: 70%;
-      width: 70%;
-      // margin-top: 130px;
       transform: rotate(+4deg);
       transform: translateX(0);
-      /* transition: all 3s; */
       animation: animate3 4s linear infinite alternate;
     }
 
+    // my animation-2
+    // @keyframes animate1 {
 
+    //   0%,20% {
+    //     transform: rotate(-2deg);
+    //     z-index: 3;
+    //   }
+
+    //   27%,47% {
+    //     transform: rotate(2deg);
+    //     z-index: 2;
+    //   }
+
+    //   54%,74% {
+    //     transform: rotate(2deg);
+    //     z-index: 3;
+    //   }
+
+    //   80%,100% {
+    //     transform: rotate(-6deg);
+    //     z-index: 1;
+
+    //   }
+    // }
+
+    // @keyframes animate2 {
+
+    //   0%,20% {
+    //     z-index: 1;
+    //     transform: rotate(4deg);
+    //   }
+
+    //   27%,47% {
+    //     transform: rotate(-5deg);
+    //     z-index: 3;
+    //   }
+
+    //   54%,74% {
+    //     transform: rotate(-5deg);
+    //     z-index: 2;
+    //   }
+
+    //   80%,100% {
+    //     transform: rotate(-2deg);
+    //     z-index: 3;
+
+    //   }
+    // }
+
+    // @keyframes animate3 {
+
+    //   0%,20% {
+    //     transform: rotate(-5deg);
+    //     transform-origin: bottom right;
+    //     z-index: 3;
+    //   }
+
+    //   27%,47% {
+    //     transform: rotate(-1deg);
+    //     transform-origin: bottom right;
+    //     z-index: 1;
+    //   }
+
+    //   54%,74% {
+    //     transform: rotate(-1deg);
+    //     transform-origin: bottom right;
+    //     z-index: 3;
+    //   }
+
+    //   80%,100% {
+    //     transform: rotate(4deg);
+    //     transform-origin: bottom right;
+
+    //     z-index: 2;
+
+    //   }
+    // }
+
+    //my animation-1
     @keyframes animate1 {
 
       0%,
-      20% {
-        transform: rotate(-2deg);
+      30% {
+        transform: rotate(0deg);
         z-index: 3;
       }
 
-      27%,
-      47% {
-        transform: rotate(2deg);
-        z-index: 2;
+
+      35%,
+      65% {
+        transform: rotate(4deg);
+        z-index: 3;
       }
 
-      54%,
-      74% {
-        transform: rotate(2deg);
-        z-index: 1;
-      }
-
-      80%,
+      70%,
       100% {
         transform: rotate(-6deg);
         z-index: 1;
@@ -202,27 +260,22 @@ section {
     @keyframes animate2 {
 
       0%,
-      20% {
-        z-index: 1;
+      30% {
+        z-index: 2;
         transform: rotate(4deg);
       }
 
-      27%,
-      47% {
+
+      35%,
+      65% {
         transform: rotate(-5deg);
         z-index: 3;
       }
 
-      54%,
-      74% {
-        transform: rotate(-5deg);
-        z-index: 3;
-      }
-
-      80%,
+      70%,
       100% {
         transform: rotate(-2deg);
-        z-index: 2;
+        z-index: 3;
 
       }
     }
@@ -230,145 +283,198 @@ section {
     @keyframes animate3 {
 
       0%,
-      20% {
-        transform: rotate(-5deg);
-        transform-origin: bottom right;
-        z-index: 2;
-      }
-
-      27%,
-      47% {
-        transform: rotate(-1deg);
-        transform-origin: bottom right;
-        z-index: 2;
-      }
-
-      54%,
-      74% {
-        transform: rotate(-1deg);
+      30% {
+        transform: rotate(-4deg);
         transform-origin: bottom right;
         z-index: 1;
       }
 
-      80%,
+
+      35%,
+      65% {
+        transform: rotate(-1deg);
+        transform-origin: bottom right;
+
+        z-index: 1;
+      }
+
+      70%,
       100% {
         transform: rotate(4deg);
-        transform-origin: bottom right;
+        transform-origin: bottom left;
 
         z-index: 3;
 
       }
     }
 
+    //predefined animation
+    // @keyframes animate1 {
+
+    //   0%,
+    //   25% {
+    //     transform: rotate(-2deg) translateX(-5px);
+    //     z-index: 3;
+    //   }
+
+    //   25.01%,
+    //   50% {
+    //     transform: rotate(2deg) translateX(5px);
+    //     z-index: 2;
+    //   }
+
+    //   50.01%,
+    //   75% {
+    //     transform: rotate(-9deg) translateX(-10px);
+    //     z-index: 1;
+    //   }
+
+    //   75.01%,
+    //   100% {
+    //     transform: rotate(0deg) translateX(0);
+    //     z-index: 0;
+    //   }
+    // }
+
+    // @keyframes animate2 {
+
+    //   0%,
+    //   25% {
+    //     transform: rotate(4deg) translateX(5px);
+    //     z-index: 1;
+    //   }
+
+    //   25.01%,
+    //   50% {
+    //     transform: rotate(-5deg) translateX(-5px);
+    //     z-index: 3;
+    //   }
+
+    //   50.01%,
+    //   75% {
+    //     transform: rotate(-2deg) translateX(10px);
+    //     z-index: 2;
+    //   }
+
+    //   75.01%,
+    //   100% {
+    //     transform: rotate(0deg) translateX(0);
+    //     z-index: 0;
+    //   }
+    // }
+
+    // @keyframes animate3 {
+
+    //   0%,
+    //   25% {
+    //     transform: rotate(-5deg) translateX(5px);
+    //     z-index: 2;
+    //   }
+
+    //   25.01%,
+    //   50% {
+    //     transform: rotate(-1deg) translateX(-5px);
+    //     z-index: 1;
+    //   }
+
+    //   50.01%,
+    //   75% {
+    //     transform: rotate(4deg) translateX(10px);
+    //     z-index: 3;
+    //   }
+
+    //   75.01%,
+    //   100% {
+    //     transform: rotate(0deg) translateX(0);
+    //     z-index: 0;
+    //   }
+    // }
+
+    //altered animation
+    // @keyframes animate1 {
+
+    //   0%,
+    //   20% {
+    //     transform: rotate(-2deg) translateX(-5px);
+    //     z-index: 3;
+    //   }
+
+    //   27%,
+    //   47% {
+    //     transform: rotate(2deg) translateX(5px);
+    //     z-index: 2;
+    //   }
+
+    //   54%,
+    //   74% {
+    //     transform: rotate(-9deg) translateX(-7px);
+    //     z-index: 1;
+    //   }
+
+    //   80%,
+    //   100% {
+    //     transform: rotate(4deg) translateX(-5);
+    //     z-index: 1;
+    //   }
+    // }
+
+    // @keyframes animate2 {
+
+    //   0%,
+    //   20% {
+    //     transform: rotate(4deg) translateX(5px);
+    //     z-index: 2;
+    //   }
+
+    //   27%,
+    //   47% {
+    //     transform: rotate(-5deg) translateX(-5px);
+    //     z-index: 3;
+    //   }
+
+    //   54%,
+    //   74% {
+    //     transform: rotate(-2deg) translateX(7px);
+    //     z-index: 3;
+    //   }
+
+    //   80%,
+    //   100% {
+    //     transform: rotate(-5deg) translateX(5);
+    //     z-index: 1;
+    //   }
+    // }
+
+    // @keyframes animate3 {
+
+    //   0%,
+    //   20% {
+    //     transform: rotate(-5deg) translateX(5px);
+    //     z-index: 1;
+    //   }
+
+    //   27%,
+    //   47% {
+    //     transform: rotate(-1deg) translateX(-5px);
+    //     z-index: 2;
+    //   }
+
+    //   54%,
+    //   74% {
+    //     transform: rotate(4deg) translateX(10px);
+    //     z-index: 3;
+    //   }
+
+    //   80%,
+    //   100% {
+    //     transform: rotate(1deg) translateX(5);
+    //     z-index: 3;
+    //   }
+    // }
   }
 
-  // .iterative-design {
-  //   aspect-ratio: 2/2;
-  //   width: 100%;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
 
-  //   .wrapper {
-  //     position: relative;
-  //     display: flex;
-  //     justify-content: center;
-  //     align-items: center;
-  //     height: 80%;
-  //     width: 80%;
-  //     gap: 10px;
-  //     border-radius: 10px;
-  //     background: rgba(255, 240, 216, 0.20);
-  //   }
 
-  //   .card1, .card2, .card3 {
-  //     position: absolute;
-  //     height: 70%;
-  //     width: 70%;
-  //     border-radius: 10px;
-  //     background-size: cover;
-  //     transition: all 400ms;
-  //   }
-
-  //   .card1 {
-  //     background-color: rgb(2, 2, 58);
-  //     background-image: url("../../assets/img/portfolio/ms/Card=1.svg");
-  //     transform-origin: bottom left;
-  //     animation: animate1 8s linear infinite alternate;
-  //   }
-
-  //   .card2 {
-  //     background-color: white;
-  //     background-image: url("../../assets/img/portfolio/ms/Card=2.svg");
-  //     transform-origin: bottom left;
-  //     animation: animate2 8s linear infinite alternate;
-  //   }
-
-  //   .card3 {
-  //     background-color: whitesmoke;
-  //     background-image: url("../../assets/img/portfolio/ms/Card=3.svg");
-  //     background-position: center;
-  //     transform-origin: bottom right;
-  //     animation: animate3 8s linear infinite alternate;
-  //   }
-
-  //   @keyframes animate1 {
-  //     0%, 20% {
-  //       transform: rotate(-2deg) translateX(-5px);
-  //       z-index: 3;
-  //     }
-  //     27%, 47% {
-  //       transform: rotate(2deg) translateX(5px);
-  //       z-index: 2;
-  //     }
-  //     54%, 74% {
-  //       transform: rotate(-9deg) translateX(-7px);
-  //       z-index: 1;
-  //     }
-  //     80%, 100% {
-  //       transform: rotate(4deg) translateX(-5);
-  //       z-index: 1;
-  //     }
-  //   }
-
-  //   @keyframes animate2 {
-  //     0%, 20% {
-  //       transform: rotate(4deg) translateX(5px);
-  //       z-index: 2;
-  //     }
-  //     27%, 47% {
-  //       transform: rotate(-5deg) translateX(-5px);
-  //       z-index: 3;
-  //     }
-  //     54%, 74% {
-  //       transform: rotate(-2deg) translateX(7px);
-  //       z-index: 3;
-  //     }
-  //     80%, 100% {
-  //       transform: rotate(-5deg) translateX(5);
-  //       z-index: 1;
-  //     }
-  //   }
-
-  //   @keyframes animate3 {
-  //     0%, 20% {
-  //       transform: rotate(-5deg) translateX(5px);
-  //       z-index: 1;
-  //     }
-  //     27%, 47% {
-  //       transform: rotate(-1deg) translateX(-5px);
-  //       z-index: 2;
-  //     }
-  //     54%, 74% {
-  //       transform: rotate(4deg) translateX(10px);
-  //       z-index: 3; 
-  //     }
-  //     80%, 100% {
-  //       transform: rotate(1deg) translateX(5); 
-  //       z-index: 3;
-  //     }
-  //   }
-  // }
 
 
 
