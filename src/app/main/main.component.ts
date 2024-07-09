@@ -1,5 +1,10 @@
 import { Component, AfterViewInit } from '@angular/core';
 import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+// import Swiper and modules styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 @Component({
   selector: 'app-main',
@@ -12,43 +17,87 @@ export class MainComponent implements AfterViewInit {
   swiper: Swiper | undefined;
 
   ngOnInit() {
-      this.swiper = new Swiper('.swiper-container', {
-          // Swiper options here
-      });
+      // this.swiper = new Swiper('.swiper-container', {
+      //     // Swiper options here
+      //     modules: [Navigation, Pagination]
+      // });
   }
 
   ngAfterViewInit(): void {
-    
-    this.swiper = new Swiper('.slide-container', {
-      slidesPerView: 3,
-      spaceBetween: 25,
-      loop: false, 
-      centeredSlides: false,
-      fadeEffect: {
-        crossFade: true
+
+    this.swiper = new Swiper('.swiper', {
+      modules: [Navigation, Pagination],
+      // Optional parameters
+      direction: 'horizontal',
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
       },
-      grabCursor: true,
+      // Responsive breakpoints
+      // breakpoints: {
+      //   // when window width is >= 320px
+      //   768: {
+      //     slidesPerView: 2,
+      //     spaceBetween: 20
+      //   },
+      //   // when window width is >= 480px
+      //   992: {
+      //     slidesPerView: 3,
+      //     spaceBetween: 30
+      //   }
+      // },
+      // If we need pagination
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
-        dynamicBullets: true
       },
+    
+      // Navigation arrows
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-      },
-      breakpoints: {
-        0: {
-          slidesPerView: 1,
-        },
-        520: {
-          slidesPerView: 2,
-        },
-        950: {
-          slidesPerView: 3,
-        },
-      },
+      }
     });
+    
+    // this.swiper = new Swiper('.slide-container', {
+    //   slidesPerView: 3,
+    //   spaceBetween: 25,
+    //   loop: false, 
+    //   centeredSlides: false,
+    //   fadeEffect: {
+    //     crossFade: true
+    //   },
+    //   grabCursor: true,
+    //   pagination: {
+    //     el: '.swiper-pagination',
+    //     clickable: true,
+    //     dynamicBullets: true
+    //   },
+    //   navigation: {
+    //     nextEl: '.swiper-button-next',
+    //     prevEl: '.swiper-button-prev',
+    //   },
+    //   breakpoints: {
+    //     0: {
+    //       slidesPerView: 1,
+    //     },
+    //     520: {
+    //       slidesPerView: 2,
+    //     },
+    //     950: {
+    //       slidesPerView: 3,
+    //     },
+    //   },
+    // });
   }
 
 
