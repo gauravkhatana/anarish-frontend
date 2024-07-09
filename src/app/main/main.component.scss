@@ -140,7 +140,7 @@
             100% {
                 top: -210px;
             }
-        }
+        } 
 
         @keyframes typing {
 
@@ -436,7 +436,7 @@
 
             .video-wrapper::before {
                 content: "";
-                position: absolute;
+                position: absolute;  
                 top: 0;
                 left: 0;
                 bottom: 0;
@@ -597,7 +597,7 @@
 }
 
 .testimonials {
-    padding: 78px 120px;
+    padding: 78px 120px; 
 
     .h-spacing {
         padding-bottom: 97px;
@@ -615,7 +615,7 @@
         }
 
         img {
-            height: 3rem;
+            height: 3rem; 
         }
     }
 }
@@ -626,7 +626,7 @@
     .active {
         background-color: #000 !important;
         color: #FFF !important;
-
+ 
         .description {
             color: #FFF !important;
         }
@@ -673,4 +673,5 @@
             }
         }
     }
-}
+} 
+
