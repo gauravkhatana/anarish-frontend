@@ -32,6 +32,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { HomeV2Component } from './home-v2/home-v2.component';
 import { DatePipe } from '@angular/common';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 // import { SwiperModule } from 'swiper/types';
 
 
@@ -71,7 +72,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     DatePipe,
-    SlickCarouselModule
+    SlickCarouselModule,
+    FontAwesomeModule
    
  
   ],
