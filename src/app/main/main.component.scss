@@ -120,11 +120,27 @@
     }
 }
 
+.c-heading {
+    h2 {
+        color: var(--system-black, #000);
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 44px;
+    }
+    p {
+        color: rgba(0, 0, 0, 0.60);
+        text-align: center;
+        font-size: 20px;
+        line-height: 1.4;
+    }
+}
+
 .svg {
     padding: 0rem;
     z-index: 0;
 
     svg {
+        border-top: solid 1px #B1D8FC;
         padding: 0rem;
         width: 100%;
         height: 100%;
@@ -341,26 +357,28 @@
 }
 
 .pixcel-perfect {
-    @include media-breakpoint-up(xl) {
-        padding: 40px 80px 80px;
-    }
+    // padding: 40px 80px 80px;
     .container {
-        .section-content {
+        .section-content { 
             display: flex;
             width: 100%;
-
             .video-wrapper {
                 padding: 0;
-                margin: 0;
+                margin: 0;  
                 position: relative;
                 z-index: 2;
-                width: min-content;
-                height: min-content;
+                width: 90%;
+               height: auto;
+                video{
+                    width: 100%;
+                    height: auto;
+                }
             }
+
 
             .video-wrapper::before {
                 content: "";
-                position: absolute;  
+                position: absolute;
                 top: 0;
                 left: 0;
                 bottom: 0;
@@ -369,19 +387,20 @@
                 background-color: #B1D8FD;
                 transform: rotate(3deg);
 
-                @include media-breakpoint-up(lg) {
-                    content: "";
-                    position: absolute;
-                    top: 0%;
-                    left: 0;
-                    bottom: 0;
-                    right: 0;
-                    z-index: -1;
-                    background-color: #B1D8FD;
-                    transform: rotate(4deg);
-                }
-            }
 
+
+                // @include media-breakpoint-up(lg) {
+                //     content: "";
+                //     position: absolute;
+                //     top: 0%;
+                //     left: 0;
+                //     bottom: 0;
+                //     right: 0;
+                //     z-index: -1;
+                //     background-color: #B1D8FD;
+                //     transform: rotate(4deg);
+                // }
+            } 
             .pixcel-video {
                 position: relative;
                 display: flex;
@@ -394,10 +413,10 @@
                     flex-direction: column;
                     align-items: start;
                 }
-            }
 
-            .pixcel-card {
-                background-color: #FFF0D9;
+            }
+            .pixcel-card {background-color: #FFF0D9;
+                position: static;
                 border-radius: 2%;
                 padding: 2.5% 2%;
                 width: 100%;
@@ -405,13 +424,12 @@
                 margin-top: 3rem;
 
                 @include media-breakpoint-up(lg) {
+                    position: relative;
                     z-index: 2;
                     top: 30%;
-                    left: -10%;
-                    width: 100%;
-                    max-width: 650px;
+                    left: -8.5em;
+                    width: 120%;
                     height: fit-content;
-
                     .card-title {
                         color: var(--system-black, #000);
                         font-size: 20px;
@@ -427,6 +445,14 @@
                         line-height: 1.5;
                     }
                 }
+                // @include media-breakpoint-up(md) {
+                //     position: relative;
+                //     z-index: 2;
+                //     top: 35%;
+                //     left: -30%;
+                //     max-width: 150%;
+                //     height: fit-content;
+                // }
 
                 .card-title {
                     color: var(--system-black, #000);
@@ -435,7 +461,6 @@
                     line-height: 1.5;
                     padding-bottom: 16px;
                 }
-
                 .card-text {
                     color: var(--system-black, #000);
                     font-size: 16px;
@@ -443,10 +468,8 @@
                     line-height: 1.6;
                 }
             }
-
         }
     }
-
 }
 
 .powerpoint-design {
@@ -526,6 +549,11 @@
         width: 100%;
         height: 100%;
       }
+      .swiper-button-next:after,.swiper-button-prev:after{
+        display: none;
+      }
+
+
       .swiper-slide {
         font-size: 18px;
         width:60%;
