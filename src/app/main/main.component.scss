@@ -4,9 +4,22 @@
     @include media-breakpoint-up(xl) {
         padding-top: 6rem;
     }
+    color: #010;
+
     h1 {
         line-height: 1.4;
+        // @include media-breakpoint-up(lg){
+        //     line-height: 1;
+        // }
     }
+    .animation-line{
+        position: relative;
+        top: -10%;
+        // @include media-breakpoint-up(lg){
+        //     position: static;
+        // }
+    }
+
     .desc {
         color: rgba(0, 0, 0, 0.60);
         font-size: 18px;
@@ -19,6 +32,7 @@
             line-height: 1.4;
         }
     }
+
     .dynamic-txts {
         display: flex;
         flex-direction: column;
@@ -41,6 +55,7 @@
 
         span::after {
             content: "";
+            overflow: hidden;
             position: absolute;
             left: 0;
             top: 1px;
@@ -49,7 +64,8 @@
             max-width: inherit;
             background-color: #B1D8FD;
             z-index: 9;
-            border-left: 3px solid #3165de;
+              border-left: 3px solid #3165de;
+            //  border-left: none;
             animation: typing 4s ease-out infinite;
         }
 
@@ -76,7 +92,9 @@
         align-items: center;
         img {
             border-radius: 9px;
-            width: 90%;
+            @include media-breakpoint-up(xl) {
+                width: 90%;
+            }
         }
     }
 
@@ -100,22 +118,28 @@
             line-height: 1;
         }
     }
-
 }
 
 .svg {
     padding: 0rem;
     z-index: 0;
+
     svg {
         padding: 0rem;
         width: 100%;
         height: 100%;
         fill: #B1D8FC;
-    } 
-} 
+    }
+}
 
+.spacing {
+    padding-bottom: 28px;
+    @include media-breakpoint-up(xl) {
+        padding-bottom: 54px;
+    }
+}
 
-.offerings { 
+.offerings {
     @include media-breakpoint-up(xl) {
         padding: 60px 80px 60px;
     }
@@ -210,9 +234,12 @@
 
             .work-card {
                 &.reduce-width {
-                    max-width: 76%;
-                    margin: 0 auto;
+                    @include media-breakpoint-up(xl) {
+                        max-width: 76%;
+                        margin: 0 auto;
+                    }
                 }
+
                 .work-heading {
                     color: var(--Primary, #121212);
                     padding-bottom: 16px;
@@ -517,16 +544,15 @@
             display: flex;
             gap: 20px;
             flex-direction: column;
-            padding: 40px 32px;
+            padding: 32px;
             .image-content {
                 display: flex;
                 gap: 20px;
                 .card-image {
-                    border-radius: 10rem;
-                    object-fit: cover;
-                    overflow: hidden;
+                    width: 6rem;
+                    height: 6rem;
                     img {
-                        object-fit: cover;
+                        border-radius: 50%;
                     }
                 }
                 .card-d {
@@ -545,19 +571,23 @@
         flex-direction: column;
         gap: 72px;
         margin-top: 4rem;
-        margin-bottom: 4rem;
         @include media-breakpoint-up(xl) {
             max-width: 88%;
             margin-left: auto;
             margin-right: auto;
             margin-top: 8rem;
-            margin-bottom: 8rem;
         }
         > .row > div {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: 30px;
+            margin-bottom: 8rem;
+            &.col-xl-3 {
+                @include media-breakpoint-up(xl) {
+                    flex: 0 0 auto;
+                    width: 20%;
+                }
+            }
         }
         img {
             height: 3rem;  

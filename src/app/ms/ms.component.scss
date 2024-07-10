@@ -294,7 +294,7 @@ section {
 
     //     z-index: 1;
     //   }
-
+ 
     //   70%,
     //   100% {
     //     transform: rotate(4deg);
@@ -307,7 +307,6 @@ section {
 
     //predefined animation
     @keyframes animate1 {
-
       0%,
       20% {
         transform: rotate(-2deg) translateX(-5px);
@@ -515,34 +514,5 @@ section {
   //   }
   // }
 
-  &.last-section {
-    p {
-      color: #000;
-      font-size: 16px;
-      font-weight: 600;
-      line-height: 1.4;
-      /* 137.5% */
-      padding-bottom: 12px;
-
-      a {
-        color: #000;
-        font-size: 30px;
-        font-weight: 600;
-        line-height: 40px;
-        /* 133.333% */
-        padding-bottom: 8px;
-        border-bottom: solid 2px #000;
-        text-decoration: none;
-
-
-      }
-    }
-
-    .next-portfolio {
-      background-image: url(../../assets/img/portfolio/ms/next-dm.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      min-height: 250px;
-    }
-  }
+ 
 }
