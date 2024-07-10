@@ -61,7 +61,6 @@ section {
 }
 
 .incremental {
-  padding: 3rem 3.5rem ;
   background-color: #C7E2FE;
 
   img {
@@ -92,9 +91,9 @@ section {
     top: 0;
     left: 0;
     bottom: 0;
-    right: 0;
+    right: 0; 
     z-index: -1;
     background-color: #FFE27C;
-    transform: rotate(4deg);
+    transform: rotate(2.5deg);
   }
 }  
