@@ -9,6 +9,9 @@
                         <label for="exampleFormControlInput1" class="form-label">What is your name? *</label>
                         <input type="text" class="form-control" name="name" id="exampleFormControlInput1" placeholder=""
                             [(ngModel)]="userData.name">
+                            <!-- <div class="invalid-feedback"
+                            *ngIf="formSubmitted && contactForm.controls['name'].hasError('required')">Name is
+                            required.</div> -->
                     </div>
                     <div class="mb-4">
                         <label for="exampleFormControlInput1" class="form-label">What is your email address? *</label>
