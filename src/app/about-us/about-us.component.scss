@@ -1,0 +1,64 @@
+@import "../../bootstrap-imports.scss";
+
+.portfolio-wrapper {
+  padding-top: 66px;
+}
+
+.masthead {
+  padding: 3rem 0;
+  position: relative;
+  overflow: hidden;
+  background: #FFE27C; 
+  @include media-breakpoint-up(xl) {
+    padding: 6rem 0;
+  }
+  .background-img {
+    position: absolute;
+    left: 36%;
+    top: 0%;
+    z-index: 1;
+    fill: #FFCF24;
+  }
+  .img-wrapper {
+    aspect-ratio: 538/305;
+    z-index: 2; 
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    max-height: 540px;
+    img {
+      width: 100%;
+      z-index: 2; 
+    }
+  }
+  .heading {
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+    padding-bottom: 12px;
+    border-bottom: solid 2px #000;
+    width: fit-content;
+    
+  }
+}
+section {
+    &.team {
+      padding: 6rem 0;
+      background-image: url(../../assets/img/portfolio/web-dev/next-lms.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 250px;
+      text-align: center;
+      h2 {
+        color:#fff;
+        margin-bottom: 24px;
+      }
+      .description {
+        color:#fff;
+        max-width: 50%;
+        margin-left: auto;
+        margin-right: auto; 
+      }
+    }
+}

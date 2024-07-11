@@ -69,12 +69,11 @@
             animation: typing 4s ease-out infinite;
         }
 
-
         @keyframes slide {
             100% {
                 top: -210px;
             }
-        } 
+        }
 
         @keyframes typing {
             40%,

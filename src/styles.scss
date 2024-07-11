@@ -64,7 +64,7 @@ body {
 /* App specific styles starts */
 h1 {
   color: #000;
-  font-size: 30px;
+  font-size: 30px; 
   font-weight: 700; 
   line-height: 1.2;
   @include media-breakpoint-up(xl) {
