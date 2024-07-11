@@ -3,11 +3,6 @@
 
 #contactUs {
     margin-top: 4.2rem;
- 
-    .container {
-        width: 100%;
-    }
-
 
     .spacing-1 {
         padding: 24px 24px;
@@ -118,10 +113,10 @@
     }
 
     .heading {
-        color: #121212;
-        font-size: 16px;
+        margin-bottom: 16px;
+        padding-bottom: 16px;
+        border-bottom: solid 1px #121212;
         font-weight: 600;
-        line-height: 137.5%;
     }
 
     .img-wrapper {

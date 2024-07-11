@@ -36,6 +36,11 @@ section {
     padding-bottom: 3rem;
   }
   &.features {
+    .description {
+      @include media-breakpoint-up(xl) {
+        margin-bottom: 32px;
+      }
+    }
     ul {
       li {
         color: #121212;
