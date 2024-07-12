@@ -8,17 +8,17 @@
   padding: 3rem 0;
   position: relative;
   overflow: hidden;
-  background: #FFE27C; 
+  background: #dbeeff; 
   @include media-breakpoint-up(xl) {
     padding: 6rem 0;
   }
-  .background-img {
-    position: absolute;
-    left: 36%;
-    top: 0%;
-    z-index: 1;
-    fill: #FFCF24;
-  }
+  // .background-img {
+  //   position: absolute;
+  //   left: 36%;
+  //   top: 0%;
+  //   z-index: 1;
+  //   fill: #FFCF24;
+  // }
   .img-wrapper {
     aspect-ratio: 538/305;
     z-index: 2; 
