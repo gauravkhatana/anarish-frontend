@@ -14,11 +14,12 @@ import { ToastrService } from 'ngx-toastr';
   standalone: true,
 })
 export class ContactUsComponent {
-  ourEmail:string = 'marketing@anarish.com';
+  ourEmail: string = 'marketing@anarish.com';
+  submissionSuccess = false;
   userData: UserData = {
     name: '',
     email: '',
-    phoneNumber: null || 0,
+    phoneNumber: '',
     intrests: [],
     projectRequirements: '',
     date: '',
@@ -33,43 +34,59 @@ export class ContactUsComponent {
     { id: 7, option: 'React Js', value: false },
   ];
 
-  constructor(private appService: AppService, private datePipe: DatePipe,private toaster: ToastrService) {}
+  constructor(
+    private appService: AppService,
+    private datePipe: DatePipe,
+    private toaster: ToastrService
+  ) {}
 
   ngOnInit(): void {}
 
   onChange(intrest: any): void {
-    console.log("hello")
+    console.log('hello');
     intrest.value = !intrest.value;
     console.log(intrest.value);
   }
 
   submitHandler(form: NgForm) {
-    this.userData.intrests = this.intrests
-      .filter((obj) => obj.value)
-      .map((value) => value.option);
+    if (form.valid) {
+      this.userData.intrests = this.intrests
+        .filter((obj) => obj.value)
+        .map((value) => value.option);
 
-    let currentDate = new Date();
+      let currentDate = new Date();
 
-    let formattedDateTime = '' + this.datePipe.transform(currentDate, 'yyyy-MM-dd') + ' ' + this.datePipe.transform(currentDate, 'HH:mm:ss');
-    // Current Date & time
+      let formattedDateTime =
+        '' +
+        this.datePipe.transform(currentDate, 'dd-MM-yyyy') +
+        ' ' +
+        this.datePipe.transform(currentDate, 'HH:mm:ss');
+      // Current Date & time
 
-    this.userData.date = formattedDateTime;
+      this.userData.date = formattedDateTime;
 
-    console.log(this.userData);
+      console.log(this.userData);
 
-    this.appService.saveData(this.userData).subscribe(
-      (data) => {
-        console.log(data, ' : saved successfully');
-        this.toaster.success("Your query have been submitted successfully")
+      this.appService.saveData(this.userData).subscribe(
+        (data) => {
+          console.log(data, ' : saved successfully');
+          // this.toaster.success("Your query have been submitted successfully");
+          this.submissionSuccess = true;
 
-      },
-      (error) => { 
-        console.error(error);
-      }
-    );
+          setTimeout(() => {
+            this.submissionSuccess = false;
+          }, 5000);
+        },
+        (error) => {
+          console.error(error);
+        }
+      );
 
-    this.appService.sendMail(this.userData).subscribe(data => console.log(data),error => console.error(error));
-    form.reset();
-    
+      this.appService.sendMail(this.userData).subscribe(
+        (data) => console.log(data),
+        (error) => console.error(error)
+      );
+      form.reset();
+    }
   }
 }

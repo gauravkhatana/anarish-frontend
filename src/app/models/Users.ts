@@ -1,5 +1,5 @@
 export interface UserData {
-    phoneNumber: number;
+    phoneNumber: String;
     name: string;
     email: string;
     intrests: string[];

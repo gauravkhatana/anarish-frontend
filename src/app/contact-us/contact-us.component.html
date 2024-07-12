@@ -7,29 +7,29 @@
                 <form action="" #formData="ngForm" (ngSubmit)="submitHandler(formData)">
                     <div class="mb-4 pt-3">
                         <label for="exampleFormControlInput1" class="form-label">What is your name? *</label>
-                        <input type="text" class="form-control" name="name" id="exampleFormControlInput1" placeholder=""
+                        <input type="text" class="form-control" required name="name" #name="ngModel" id="exampleFormControlInput1" placeholder="" 
                             [(ngModel)]="userData.name">
-                            <!-- <div class="invalid-feedback"
-                            *ngIf="formSubmitted && contactForm.controls['name'].hasError('required')">Name is
-                            required.</div> -->
+                            <small class="text-danger ps-1" *ngIf="name.errors?.['required'] && formData.submitted">Name is required</small>
+
                     </div>
                     <div class="mb-4">
                         <label for="exampleFormControlInput1" class="form-label">What is your email address? *</label>
-                        <input type="email" class="form-control" name="email" id="exampleFormControlInput1"
+                        <input #email="ngModel" type="email" required class="form-control" name="email" 
                             placeholder="" [(ngModel)]="userData.email">
+                            <small class="text-danger ps-2" *ngIf="email.errors?.['required'] && formData.submitted">Email is required</small>
                     </div>
                     <div class="mb-4">
                         <label for="exampleFormControlInput1" class="form-label">What is your phone number?</label>
-                        <input type="text" class="form-control" name="phoneNumber" id="exampleFormControlInput1"
-                            placeholder="" [(ngModel)]="userData.phoneNumber">
+                        <input type="number" class="form-control" #phoneNumber="ngModel" name="phoneNumber" [(ngModel)]="userData.phoneNumber"
+                            placeholder="Phone Number" pattern="^[0-9]{10}$"  minlength="10" maxlength="10" required>
+                            <small class="text-danger ps-2" *ngIf="phoneNumber.errors?.['pattern'] && formData.submitted">Phone Number should contain 10 numbers only</small>
                     </div>
-
-
-                    <p class="checkbox-header mb-1">Interested in:</p>
+                 
+                    <p class="checkbox-header mb-1">Interested in:</p> 
                     <div class="row mb-4">
                         <div class="col-8 col-lg-12 check-items ">
                             <p class="" *ngFor="let intrest of intrests">
-                                <button (click)="onChange(intrest)" [class.active]="intrest.value"
+                                <button type="button" (click)="onChange(intrest)" [class.active]="intrest.value"
                                     class="badge rounded-pill badge-anarish me-2" [id]="intrest.id">
                                     {{intrest.option}}
                                     <svg [class.d-none]="!intrest.value" xmlns="http://www.w3.org/2000/svg" width="14"
@@ -50,9 +50,11 @@
                             [(ngModel)]="userData.projectRequirements"></textarea>
                     </div>
                     <div class="submit d-flex justify-content-center">
-                        <button type="submit" class="btn submit-btn">Submit</button>
+                        <button type="submit" class="btn submit-btn" >Submit</button>
                     </div>
+                    <p *ngIf="submissionSuccess" class="alert alert-success mt-3"> We have successfully received your query, our team will be in touch soon! </p>
                 </form>
+
 
 
             </div>
