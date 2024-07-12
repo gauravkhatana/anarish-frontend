@@ -1,24 +1,12 @@
 @import "../../bootstrap-imports.scss";
 
-.portfolio-wrapper {
-  padding-top: 66px;
-}
-
-.masthead {   
-  padding: 3rem 0;
+.masthead { 
   position: relative;
   overflow: hidden;
   background: #dbeeff; 
   @include media-breakpoint-up(xl) {
-    padding: 6rem 0;
+    padding-top: 6rem; 
   }
-  // .background-img {
-  //   position: absolute;
-  //   left: 36%;
-  //   top: 0%;
-  //   z-index: 1;
-  //   fill: #FFCF24;
-  // }
   .img-wrapper {
     aspect-ratio: 538/305;
     z-index: 2; 
@@ -44,22 +32,11 @@
   }
 }
 section {
-  &.benefits{
-    h2{
+  &.benefits {
+    h2 {
       font-weight: 600;
-      color: #3081D0;
     }
-    .head{
-      padding-bottom: 70px;
-      h1{
-        padding-bottom: 24px;  
-        width: 80%;
-      }  
-      h3{
-        width: 60%;
-      }
-    }
-    .card{
+    .card {
       padding: 20px;
       height: 100%; 
       gap: 20px;
@@ -68,31 +45,28 @@ section {
       .card-body{
         padding: 0;
       }
-      h5{
+      h5 {
        padding-bottom: 1.5rem; 
        font-weight: 600;
       }
     }
   }
-}
-
-section {
-    &.team {
-      padding: 6rem 0;
-      background-image: url(../../assets/img/portfolio/web-dev/next-lms.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      min-height: 250px;
-      text-align: center;
-      h2 {
-        color:#fff;
-        margin-bottom: 24px;
-      }
-      .description {
-        color:#fff;
-        max-width: 50%;
-        margin-left: auto;
-        margin-right: auto; 
-      }
+  &.team {
+    padding: 6rem 0;
+    background-image: url(../../assets/img/portfolio/web-dev/next-lms.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 250px;
+    text-align: center;
+    h2 {
+      color:#fff;
+      margin-bottom: 24px;
     }
+    .description {
+      color:#fff;
+      max-width: 50%;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+  }
 }

@@ -548,11 +548,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: 8rem;
+            margin-bottom: 3rem;
             &.col-xl-3 {
                 @include media-breakpoint-up(xl) {
                     flex: 0 0 auto;
                     width: 20%;
+                    margin-bottom: 8rem;
                 }
             }
         }
