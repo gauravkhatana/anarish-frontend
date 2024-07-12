@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { AppService } from '../app.service';
 import { UserData } from '../models/Users';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { DatePipe } from '@angular/common';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-contact-us',
@@ -32,7 +33,7 @@ export class ContactUsComponent {
     { id: 7, option: 'React Js', value: false },
   ];
 
-  constructor(private appService: AppService, private datePipe: DatePipe) {}
+  constructor(private appService: AppService, private datePipe: DatePipe,private toaster: ToastrService) {}
 
   ngOnInit(): void {}
 
@@ -42,7 +43,7 @@ export class ContactUsComponent {
     console.log(intrest.value);
   }
 
-  submitHandler() {
+  submitHandler(form: NgForm) {
     this.userData.intrests = this.intrests
       .filter((obj) => obj.value)
       .map((value) => value.option);
@@ -59,13 +60,16 @@ export class ContactUsComponent {
     this.appService.saveData(this.userData).subscribe(
       (data) => {
         console.log(data, ' : saved successfully');
+        this.toaster.success("Your query have been submitted successfully")
+
       },
-      (error) => {
+      (error) => { 
         console.error(error);
       }
     );
 
     this.appService.sendMail(this.userData).subscribe(data => console.log(data),error => console.error(error));
+    form.reset();
     
   }
 }
