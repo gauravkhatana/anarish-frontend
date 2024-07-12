@@ -17,14 +17,14 @@ export class AppService {
   }
 
   saveData(userData:UserData): Observable<UserData> {
-    return this.http.post<any>('https://anarish-node-express-server.vercel.app/users',userData)
+    return this.http.post<any>('https://anarish-website-v3.vercel.app/users',userData)
       .pipe(
         catchError(this.handleError)
       );
   }
 
   sendMail(userData:UserData): Observable<UserData> {
-    return this.http.post<any>('https://anarish-node-express-server.vercel.app/sendmail',userData)
+    return this.http.post<any>('https://anarish-website-v3.vercel.app/sendmail',userData)
       .pipe(
         catchError(this.handleError)
       );
